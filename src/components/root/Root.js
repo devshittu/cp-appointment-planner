@@ -23,3 +23,5 @@ function Root() {
 }
 
 export default Root;
+
+// src / components / root / Root.js;
