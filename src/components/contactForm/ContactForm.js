@@ -10,7 +10,29 @@ export const ContactForm = ({
   handleSubmit
 }) => {
   return (
-    <></>
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        placeholder="Name"
+      />
+      <input
+        type="tel"
+        value={phone}
+        onChange={(e) => setPhone(e.target.value)}
+        placeholder="Phone"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" // Example pattern
+      />
+      <input
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="Email"
+      />
+      <button type="submit">Add Contact</button>
+    </form>
   );
 };
 
+// src/components/contactForm/ContactForm.js
